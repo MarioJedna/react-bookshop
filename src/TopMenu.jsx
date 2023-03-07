@@ -13,7 +13,7 @@ export default function TopMenu(currentItem, setTestValue) {
     // setPage(id);
   };
 
-  console.log(currentItem);
+  // console.log(currentItem);
 
   //   const currentItem = props.currenItem;
   //   const { currentItem } = props;

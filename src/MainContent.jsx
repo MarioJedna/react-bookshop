@@ -1,4 +1,10 @@
+import Homepage from "./Homepage";
+import { useContext } from "react";
+import Context from "./Context";
+
 export default function MainContent({ page }) {
+  const { context } = useContext(Context);
+
   let content = "";
 
   if (page === "") {
@@ -12,7 +18,7 @@ export default function MainContent({ page }) {
   }
 
   return (
-    <div className="jumbotron jumbotron-fluid">
+    <div className={"jumbotron jumbotron-fluid main main--" + context.theme}>
       <h1 className="display-4">
         {" "}
         Mario's Books <span className="badge badge-info">brand new!!</span>
@@ -29,6 +35,7 @@ export default function MainContent({ page }) {
       <a className="btn btn-primary btn-lg" href="#" role="button">
         Learn more{" "}
       </a>
+      <Homepage />
     </div>
   );
 }

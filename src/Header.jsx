@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TopMenu from "./TopMenu";
-// import header.scss
+import CurrencySelection from "./CurrencySelection";
+import "./Header.scss";
 
 export default function Header() {
   const [testValue, setTestValue] = useState(null);
@@ -8,9 +9,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__sitename">Mario's Books</div>
-
-      <div>last menu item clicked: {testValue}</div>
-
+      <CurrencySelection />
       <TopMenu currentItem={"about"} setTestValue={setTestValue} />
     </header>
   );
